@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+@model Web.LanguagesView.UserViewModel
+@{
+    ViewBag.Title = Resources.WebResources.Title;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div class="col-md-4">
+        <form method="post" action="@Url.Action("ChangeCulture", "Index")" >
+            <p>@Resources.WebResources.SelectLanuage :
+            <select onchange="this.form.submit()" name="ddlCulture" id="ddlCulture">
+                
+                 <option value="zh-CN" @(Session["CurrentCulture"].Equals("zh-CN") ? "selected" : "")>@Resources.WebResources.Chinese</option>
+                 <option value="en-Us" @(Session["CurrentCulture"].Equals("en-Us") ? "selected" : "")>@Resources.WebResources.English</option>
+                 
+                 </select>  
+            </p>
+        </form>
+    </div>
+
+
+    <br />
+    <form method="post" action="@Url.Action("Add","Register")">
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label>@Resources.WebResources.UserName </label>
+                <div class="col-md-10">
+                    <input type="text" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>@Resources.WebResources.FullName</label>
+                <div class="col-md-10">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="@Resources.WebResources.Save" class=" btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

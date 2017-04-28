@@ -9,7 +9,7 @@ namespace Core.Data.ProductData
 {
 
     [Export]
-    public class ProductDataAccess
+    internal class ProductDataAccess
     {
 
 
