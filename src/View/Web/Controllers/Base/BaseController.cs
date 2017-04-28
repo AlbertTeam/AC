@@ -1,4 +1,5 @@
-﻿using CommonTool.Base64;
+﻿using CommonTool;
+using CommonTool.Base64;
 using CommonTool.Converts;
 using System;
 using System.Collections.Generic;
@@ -61,14 +62,17 @@ namespace Web.Controllers.Base
         protected override void Initialize(System.Web.Routing.RequestContext requestContext)
         {
             base.Initialize(requestContext);
-            if (Session["CurrentCulture"] != null)
+            if (Request.Cookies != null && Request.Cookies["CurrentCulture"].Value != null)
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo(Session["CurrentCulture"].ToString());
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo(Session["CurrentCulture"].ToString());
+                string lang = Request.Cookies["CurrentCulture"].Value;
+                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(lang);
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lang);
+     
             }
             else
             {
-                Session["CurrentCulture"] = "zh-CN";
+                HttpCookie cookieLange = new HttpCookie("CurrentCulture", "zh-CN");
+                Response.AppendCookie(cookieLange);
             }
         }
         protected override void OnException(ExceptionContext filterContext)
@@ -79,10 +83,9 @@ namespace Web.Controllers.Base
 
             }
             else
-            {               
-
-                throw filterContext?.Exception??new Exception("  dadas");                
-                //filterContext.Result = new RedirectResult(Url.Action("Error500", "Error"));
+            {
+                Logger.GetLogger(filterContext.Exception.Source).Error(filterContext.Exception.ToString());            
+                filterContext.Result = new RedirectResult(Url.Action("Error500", "Error"));
             }           
         }
     }

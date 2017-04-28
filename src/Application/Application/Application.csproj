@@ -48,6 +48,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core.Data\Core.Data.csproj">
+      <Project>{13e308dd-f9b9-4374-966e-e960f60a5536}</Project>
+      <Name>Core.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Core.IService\Core.IService.csproj">
       <Project>{378e365b-cb24-4985-9e71-219e1e0a290e}</Project>
       <Name>Core.IService</Name>

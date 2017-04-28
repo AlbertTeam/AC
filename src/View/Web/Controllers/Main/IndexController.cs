@@ -29,8 +29,8 @@ namespace Web.Controllers.Main
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(ddlCulture);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(ddlCulture);
-
-            Session["CurrentCulture"] = ddlCulture;
+            HttpCookie cookieLange = new HttpCookie("CurrentCulture", ddlCulture);
+            Response.AppendCookie(cookieLange); 
             return Redirect(Request.UrlReferrer.AbsolutePath);
         }
         //[HttpGet]

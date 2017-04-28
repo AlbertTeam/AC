@@ -19,8 +19,8 @@
             <p>@Resources.WebResources.SelectLanuage :
             <select onchange="this.form.submit()" name="ddlCulture" id="ddlCulture">
                 
-                 <option value="zh-CN" @(Session["CurrentCulture"].Equals("zh-CN") ? "selected" : "")>@Resources.WebResources.Chinese</option>
-                 <option value="en-Us" @(Session["CurrentCulture"].Equals("en-Us") ? "selected" : "")>@Resources.WebResources.English</option>
+                 <option value="zh-CN" @(Request.Cookies["CurrentCulture"].Value.Equals("zh-CN") ? "selected" : "")>@Resources.WebResources.Chinese</option>
+                 <option value="en-Us" @(Request.Cookies["CurrentCulture"].Value.Equals("en-Us") ? "selected" : "")>@Resources.WebResources.English</option>
                  
                  </select>  
             </p>
