@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SearchService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://127.0.0.1:16880/SearchService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://127.0.0.1:16880/SearchService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://127.0.0.1:16880/SearchService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JChemBaseSearch" />
+      <xsd:import schemaLocation="http://127.0.0.1:16880/SearchService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://127.0.0.1:16880/SearchService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://127.0.0.1:16880/SearchService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/JChemBaseSearchEntity" />
+      <xsd:import schemaLocation="http://127.0.0.1:16880/SearchService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/JChemBaseSearchEntity.CalculatePrices" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISearchService_GetMoleculeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoleculeList" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetMoleculeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoleculeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetMol_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMol" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetMol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSmiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmiles" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSmiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetCitatioinList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitatioinList" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetCitatioinList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitatioinListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetConditionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionList" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetConditionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConditionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetMoleculeConditionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoleculeConditionList" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetMoleculeConditionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoleculeConditionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetPicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPicture" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetPicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetCitationPicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitationPicture" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetCitationPicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitationPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetTagPicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTagPicture" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetTagPicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTagPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetRxnFromProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRxnFromProduct" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetRxnFromProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRxnFromProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSubStrctureProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubStrctureProduct" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSubStrctureProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubStrctureProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetRxnByReactionID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRxnByReactionID" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetRxnByReactionID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRxnByReactionIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetReactionByConditon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReactionByConditon" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetReactionByConditon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReactionByConditonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetReactionLike_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReactionLike" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetReactionLike_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReactionLikeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetProductLike_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductLike" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetProductLike_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductLikeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetRetroReaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetroReaction" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetRetroReaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetroReactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSmilesByCAS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmilesByCAS" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSmilesByCAS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmilesByCASResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetItemPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemPrice" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetItemPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_ListPriceCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListPriceCount" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_ListPriceCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListPriceCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetPriceHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceHistory" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetPriceHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetMolByCasOrName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMolByCasOrName" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetMolByCasOrName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMolByCasOrNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSmilesByCasOrName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmilesByCasOrName" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSmilesByCasOrName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmilesByCasOrNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetReactionWayPic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReactionWayPic" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetReactionWayPic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReactionWayPicResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_SaveReactionWay_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReactionWay" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_SaveReactionWay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveReactionWayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_ExportWord_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportWord" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_ExportWord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetCitationByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitationByID" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetCitationByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitationByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetReactionByReactant_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReactionByReactant" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetReactionByReactant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReactionByReactantResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetCD_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCD_ID" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetCD_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCD_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetJchemQueryID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJchemQueryID" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetJchemQueryID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJchemQueryIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSmilesFromCASByChemaxon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmilesFromCASByChemaxon" />
+  </wsdl:message>
+  <wsdl:message name="ISearchService_GetSmilesFromCASByChemaxon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmilesFromCASByChemaxonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISearchService">
+    <wsdl:operation name="GetMoleculeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetMoleculeList" message="tns:ISearchService_GetMoleculeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetMoleculeListResponse" message="tns:ISearchService_GetMoleculeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMol">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetMol" message="tns:ISearchService_GetMol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetMolResponse" message="tns:ISearchService_GetMol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetSmiles" message="tns:ISearchService_GetSmiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetSmilesResponse" message="tns:ISearchService_GetSmiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitatioinList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetCitatioinList" message="tns:ISearchService_GetCitatioinList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetCitatioinListResponse" message="tns:ISearchService_GetCitatioinList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConditionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetConditionList" message="tns:ISearchService_GetConditionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetConditionListResponse" message="tns:ISearchService_GetConditionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoleculeConditionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetMoleculeConditionList" message="tns:ISearchService_GetMoleculeConditionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetMoleculeConditionListResponse" message="tns:ISearchService_GetMoleculeConditionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetPicture" message="tns:ISearchService_GetPicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetPictureResponse" message="tns:ISearchService_GetPicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitationPicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetCitationPicture" message="tns:ISearchService_GetCitationPicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetCitationPictureResponse" message="tns:ISearchService_GetCitationPicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTagPicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetTagPicture" message="tns:ISearchService_GetTagPicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetTagPictureResponse" message="tns:ISearchService_GetTagPicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRxnFromProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetRxnFromProduct" message="tns:ISearchService_GetRxnFromProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetRxnFromProductResponse" message="tns:ISearchService_GetRxnFromProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubStrctureProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetSubStrctureProduct" message="tns:ISearchService_GetSubStrctureProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetSubStrctureProductResponse" message="tns:ISearchService_GetSubStrctureProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRxnByReactionID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetRxnByReactionID" message="tns:ISearchService_GetRxnByReactionID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetRxnByReactionIDResponse" message="tns:ISearchService_GetRxnByReactionID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReactionByConditon">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetReactionByConditon" message="tns:ISearchService_GetReactionByConditon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetReactionByConditonResponse" message="tns:ISearchService_GetReactionByConditon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReactionLike">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetReactionLike" message="tns:ISearchService_GetReactionLike_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetReactionLikeResponse" message="tns:ISearchService_GetReactionLike_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductLike">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetProductLike" message="tns:ISearchService_GetProductLike_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetProductLikeResponse" message="tns:ISearchService_GetProductLike_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRetroReaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetRetroReaction" message="tns:ISearchService_GetRetroReaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetRetroReactionResponse" message="tns:ISearchService_GetRetroReaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmilesByCAS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetSmilesByCAS" message="tns:ISearchService_GetSmilesByCAS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetSmilesByCASResponse" message="tns:ISearchService_GetSmilesByCAS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetItemPrice" message="tns:ISearchService_GetItemPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetItemPriceResponse" message="tns:ISearchService_GetItemPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPriceCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/ListPriceCount" message="tns:ISearchService_ListPriceCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/ListPriceCountResponse" message="tns:ISearchService_ListPriceCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetPriceHistory" message="tns:ISearchService_GetPriceHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetPriceHistoryResponse" message="tns:ISearchService_GetPriceHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMolByCasOrName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetMolByCasOrName" message="tns:ISearchService_GetMolByCasOrName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetMolByCasOrNameResponse" message="tns:ISearchService_GetMolByCasOrName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmilesByCasOrName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetSmilesByCasOrName" message="tns:ISearchService_GetSmilesByCasOrName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetSmilesByCasOrNameResponse" message="tns:ISearchService_GetSmilesByCasOrName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReactionWayPic">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetReactionWayPic" message="tns:ISearchService_GetReactionWayPic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetReactionWayPicResponse" message="tns:ISearchService_GetReactionWayPic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveReactionWay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/SaveReactionWay" message="tns:ISearchService_SaveReactionWay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/SaveReactionWayResponse" message="tns:ISearchService_SaveReactionWay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportWord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/ExportWord" message="tns:ISearchService_ExportWord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/ExportWordResponse" message="tns:ISearchService_ExportWord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCitationByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetCitationByID" message="tns:ISearchService_GetCitationByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetCitationByIDResponse" message="tns:ISearchService_GetCitationByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReactionByReactant">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetReactionByReactant" message="tns:ISearchService_GetReactionByReactant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetReactionByReactantResponse" message="tns:ISearchService_GetReactionByReactant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCD_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetCD_ID" message="tns:ISearchService_GetCD_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetCD_IDResponse" message="tns:ISearchService_GetCD_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJchemQueryID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetJchemQueryID" message="tns:ISearchService_GetJchemQueryID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetJchemQueryIDResponse" message="tns:ISearchService_GetJchemQueryID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmilesFromCASByChemaxon">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchService/GetSmilesFromCASByChemaxon" message="tns:ISearchService_GetSmilesFromCASByChemaxon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchService/GetSmilesFromCASByChemaxonResponse" message="tns:ISearchService_GetSmilesFromCASByChemaxon_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISearchService" type="tns:ISearchService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMoleculeList">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetMoleculeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMol">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetMol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmiles">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetSmiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitatioinList">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetCitatioinList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConditionList">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetConditionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoleculeConditionList">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetMoleculeConditionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPicture">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitationPicture">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetCitationPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTagPicture">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetTagPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRxnFromProduct">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetRxnFromProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubStrctureProduct">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetSubStrctureProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRxnByReactionID">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetRxnByReactionID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReactionByConditon">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetReactionByConditon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReactionLike">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetReactionLike" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductLike">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetProductLike" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRetroReaction">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetRetroReaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmilesByCAS">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetSmilesByCAS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemPrice">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetItemPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPriceCount">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/ListPriceCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceHistory">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetPriceHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMolByCasOrName">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetMolByCasOrName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmilesByCasOrName">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetSmilesByCasOrName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReactionWayPic">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetReactionWayPic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveReactionWay">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/SaveReactionWay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExportWord">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/ExportWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCitationByID">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetCitationByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReactionByReactant">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetReactionByReactant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCD_ID">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetCD_ID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJchemQueryID">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetJchemQueryID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmilesFromCASByChemaxon">
+      <soap:operation soapAction="http://tempuri.org/ISearchService/GetSmilesFromCASByChemaxon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SearchService">
+    <wsdl:port name="BasicHttpBinding_ISearchService" binding="tns:BasicHttpBinding_ISearchService">
+      <soap:address location="http://127.0.0.1:16880/SearchService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

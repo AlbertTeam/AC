@@ -118,51 +118,75 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Address" xml:space="preserve">
-    <value>地址</value>
+    <value>Address</value>
   </data>
   <data name="AddressRequired" xml:space="preserve">
-    <value>地址必填</value>
+    <value>AddressRequired</value>
   </data>
   <data name="Chinese" xml:space="preserve">
-    <value>中文</value>
+    <value>Chinese</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
-    <value>确认密码</value>
+    <value>ConfirmPassword</value>
   </data>
   <data name="ConfirmPasswordCompare" xml:space="preserve">
-    <value>密码不匹配</value>
+    <value>ConfirmPasswordCompare</value>
   </data>
   <data name="ConfirmPasswordRequired" xml:space="preserve">
-    <value>确定密码必填</value>
+    <value>ConfirmPasswordRequired</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>联系我们</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>@2017Chemical.ai All Rights Reserved</value>
   </data>
   <data name="English" xml:space="preserve">
-    <value>英文</value>
+    <value>English</value>
+  </data>
+  <data name="Explain" xml:space="preserve">
+    <value>使用手册</value>
   </data>
   <data name="FullName" xml:space="preserve">
-    <value>全名</value>
+    <value>FullName</value>
+  </data>
+  <data name="LanguageSwitch" xml:space="preserve">
+    <value>Switch to Chemical.ai in English</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登陆</value>
   </data>
   <data name="NameRequired" xml:space="preserve">
-    <value>全名必填</value>
+    <value>NameRequired</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>密码</value>
+    <value>Password</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
-    <value>密码必填</value>
+    <value>PasswordRequired</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>确定</value>
+    <value>Save</value>
   </data>
   <data name="SelectLanuage" xml:space="preserve">
     <value>切换语言</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="TermsOfCondition" xml:space="preserve">
+    <value>使用条款</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>网化智能</value>
   </data>
   <data name="UserName" xml:space="preserve">
-    <value>名称</value>
+    <value>UserName</value>
   </data>
   <data name="UserNameRequired" xml:space="preserve">
-    <value>用户名称必填</value>
+    <value>UserNameRequired</value>
   </data>
 </root>

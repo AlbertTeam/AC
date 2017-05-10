@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="CommonTool">
       <HintPath>..\..\..\CommonDLL\WHT\CommonTool.dll</HintPath>
     </Reference>
@@ -58,6 +61,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -97,44 +102,446 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\WCF.ReactionWay\SearchService.disco" />
+    <None Include="Connected Services\WCF.ReactionWay\configuration91.svcinfo" />
+    <None Include="Connected Services\WCF.ReactionWay\configuration.svcinfo" />
+    <None Include="Connected Services\WCF.ReactionWay\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="Image\index\add_user_icon.png" />
+    <Content Include="Image\index\down_arrow.png" />
+    <Content Include="Image\index\logo.png" />
+    <Content Include="Image\index\menu_icon.png" />
+    <Content Include="Image\index\up_arrow.png" />
+    <Content Include="Image\index\user_icon.png" />
+    <Content Include="Image\index_bg.png" />
+    <Content Include="Image\index_sprite.png" />
+    <Content Include="Image\syntheticnew\collect_icon.png" />
+    <Content Include="Image\syntheticnew\collect_icon2.png" />
+    <Content Include="Image\syntheticnew\feedback_icon.png" />
+    <Content Include="Image\syntheticnew\gray_addUser_icon.png" />
+    <Content Include="Image\syntheticnew\gray_user_icon.png" />
+    <Content Include="Image\syntheticnew\green_menu_icon.png" />
+    <Content Include="Image\syntheticnew\loading_icon.png" />
+    <Content Include="Image\syntheticnew\loading_icon2.png" />
+    <Content Include="Image\syntheticnew\money_icon.png" />
+    <Content Include="Image\syntheticnew\setting_icon.png" />
+    <Content Include="Image\syntheticnew\syntheticnew_icon.png" />
+    <Content Include="Image\syntheticnew\time_icon.png" />
+    <Content Include="Image\syntheticnew\world_icon.png" />
+    <Content Include="Image\syntheticnew_sprite.png" />
+    <Content Include="Image\test1.png" />
+    <Content Include="Image\yellow%402x.png" />
+    <Content Include="Image\yellow.png" />
+    <Content Include="Scripts\chemaxon\css\doc.css" />
+    <Content Include="Scripts\chemaxon\css\example-edit-images.css" />
+    <Content Include="Scripts\chemaxon\css\index.css" />
+    <Content Include="Scripts\chemaxon\css\substructuresearch.css" />
+    <Content Include="Scripts\chemaxon\gui\1315DDDF684D78C493445F0C088BD8D9.cache.txt" />
+    <Content Include="Scripts\chemaxon\gui\39ACC6BBFF03DBD3FEF71010E5DAA8C1.cache.js" />
+    <Content Include="Scripts\chemaxon\gui\clear.cache.gif" />
+    <Content Include="Scripts\chemaxon\gui\css\auto\clean.css" />
+    <Content Include="Scripts\chemaxon\gui\css\auto\gui.css" />
+    <Content Include="Scripts\chemaxon\gui\css\editor.css" />
+    <Content Include="Scripts\chemaxon\gui\css\editor.min.css" />
+    <Content Include="Scripts\chemaxon\gui\deferredjs\39ACC6BBFF03DBD3FEF71010E5DAA8C1\1.cache.js" />
+    <Content Include="Scripts\chemaxon\gui\deferredjs\39ACC6BBFF03DBD3FEF71010E5DAA8C1\2.cache.js" />
+    <Content Include="Scripts\chemaxon\gui\gui.nocache.js" />
+    <Content Include="Scripts\chemaxon\gui\lib\es6-promise-2.0.1.min.js" />
+    <Content Include="Scripts\chemaxon\gui\lib\promise-0.1.1.min.js" />
+    <Content Include="Scripts\chemaxon\gui\lib\promise-1.0.0.min.js" />
+    <Content Include="Scripts\chemaxon\js\lib\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\chemaxon\js\lib\qrcode\qrcode.min.js" />
+    <Content Include="Scripts\chemaxon\js\lib\rainbow\github.css" />
+    <Content Include="Scripts\chemaxon\js\lib\rainbow\rainbow-custom.min.js" />
+    <Content Include="Scripts\chemaxon\js\lib\rainbow\twilight.css" />
+    <Content Include="Scripts\chemaxon\js\marvinjslauncher.js" />
+    <Content Include="Scripts\chemaxon\js\util.js" />
+    <Content Include="Scripts\chemaxon\js\webservices.js" />
+    <Content Include="Scripts\jquery.icheck.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\Ketcher\base64.js" />
+    <Content Include="Scripts\Ketcher\chem\cis_trans.js" />
+    <Content Include="Scripts\Ketcher\chem\dfs.js" />
+    <Content Include="Scripts\Ketcher\chem\element.js" />
+    <Content Include="Scripts\Ketcher\chem\inchi.js" />
+    <Content Include="Scripts\Ketcher\chem\molfile.js" />
+    <Content Include="Scripts\Ketcher\chem\sgroup.js" />
+    <Content Include="Scripts\Ketcher\chem\smiles.js" />
+    <Content Include="Scripts\Ketcher\chem\stereocenters.js" />
+    <Content Include="Scripts\Ketcher\chem\struct.js" />
+    <Content Include="Scripts\Ketcher\chem\struct_valence.js" />
+    <Content Include="Scripts\Ketcher\favicon.ico" />
+    <Content Include="Scripts\Ketcher\icons\logo_small01.jpg" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_any.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_any.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_aromatic.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_aromatic.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_crossed.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_crossed.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_double.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_double.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_doublearomatic.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_doublearomatic.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_down.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_down.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_single.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_single.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_singlearomatic.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_singlearomatic.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_singledouble.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_singledouble.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_triple.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_triple.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_up.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_up.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_updown.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\bond\bond_updown.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate0.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate0.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate1.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate1.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate2.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate2.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate3.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate3.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate4.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate4.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate5.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate5.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate6.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate6.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate7.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\customtemplate\customtemplate7.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\arom.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\arrow.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\chain.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\charge_minus.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\charge_plus.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\dearom.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\document-new.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\document-open.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\document-save-as.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\edit-clear.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\edit-copy.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\edit-cut.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\edit-paste.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\edit-redo.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\edit-undo.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\layout.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\logo.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\sgroup.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\view-zoom-in.png" />
+    <Content Include="Scripts\Ketcher\icons\png\main\view-zoom-out.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-arrow.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-arrow.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-automap.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-automap.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-map.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-map.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-plus.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-plus.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-unmap.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\reaction\reaction-unmap.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\rgroup\rgroup-attpoints.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\rgroup\rgroup-attpoints.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\rgroup\rgroup-fragment.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\rgroup\rgroup-fragment.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\rgroup\rgroup-label.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\rgroup\rgroup-label.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\selection\lasso.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\selection\lasso.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\selection\rectangle.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\selection\rectangle.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\selection\structure.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\selection\structure.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template0.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template0.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template1.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template1.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template10.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template10.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template11.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template11.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template12.24.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template12.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template13.24.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template13.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template14.24.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template14.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template15.24.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template15.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template2.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template2.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template3.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template3.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template4.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template4.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template5.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template5.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template6.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template6.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template7.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template7.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template8.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template8.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template9.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\template\template9.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\transform\transform-flip-h.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\transform\transform-flip-h.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\transform\transform-flip-v.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\transform\transform-flip-v.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\png\transform\transform-rotate.dropdown.png" />
+    <Content Include="Scripts\Ketcher\icons\png\transform\transform-rotate.sidebar.png" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_any.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_aromatic.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_crossed.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_double.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_doublearomatic.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_down.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_single.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_singlearomatic.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_singledouble.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_triple.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_up.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\bond_updown.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\chain.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\charge_minus.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\charge_plus.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\template0.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\template1.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\template2.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\template3.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\template4.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\template5.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\template6.svg" />
+    <Content Include="Scripts\Ketcher\icons\svg\template7.svg" />
+    <Content Include="Scripts\Ketcher\ketcher.css" />
+    <Content Include="Scripts\Ketcher\ketcher.js" />
+    <Content Include="Scripts\Ketcher\loading.gif" />
+    <Content Include="Scripts\Ketcher\prototype-min.js" />
+    <Content Include="Scripts\Ketcher\raphael.js" />
+    <Content Include="Scripts\Ketcher\reaxys\reaxys.js" />
+    <Content Include="Scripts\Ketcher\rnd\editor.js" />
+    <Content Include="Scripts\Ketcher\rnd\elem_table.js" />
+    <Content Include="Scripts\Ketcher\rnd\render.js" />
+    <Content Include="Scripts\Ketcher\rnd\restruct.js" />
+    <Content Include="Scripts\Ketcher\rnd\restruct_rendering.js" />
+    <Content Include="Scripts\Ketcher\rnd\rgroup_table.js" />
+    <Content Include="Scripts\Ketcher\rnd\templates.js" />
+    <Content Include="Scripts\Ketcher\rnd\visel.js" />
+    <Content Include="Scripts\Ketcher\templates.sdf" />
+    <Content Include="Scripts\Ketcher\third_party\keymaster.js" />
+    <Content Include="Scripts\Ketcher\third_party\prototype.js" />
+    <Content Include="Scripts\Ketcher\ui\actions.js" />
+    <Content Include="Scripts\Ketcher\ui\ui.js" />
+    <Content Include="Scripts\Ketcher\util\common.js" />
+    <Content Include="Scripts\Ketcher\util\map.js" />
+    <Content Include="Scripts\Ketcher\util\pool.js" />
+    <Content Include="Scripts\Ketcher\util\set.js" />
+    <Content Include="Scripts\Ketcher\util\vec2.js" />
+    <Content Include="Scripts\layer\layer.js" />
+    <Content Include="Scripts\layer\mobile\layer.js" />
+    <Content Include="Scripts\layer\mobile\need\layer.css" />
+    <Content Include="Scripts\layer\skin\default\icon-ext.png" />
+    <Content Include="Scripts\layer\skin\default\icon.png" />
+    <Content Include="Scripts\layer\skin\default\layer.css" />
+    <Content Include="Scripts\layer\skin\default\loading-0.gif" />
+    <Content Include="Scripts\layer\skin\default\loading-1.gif" />
+    <Content Include="Scripts\layer\skin\default\loading-2.gif" />
+    <Content Include="Scripts\page\common.js" />
+    <Content Include="Scripts\page\index.js" />
+    <Content Include="Scripts\page\syntheticnew.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\WebResources.zh-CN.designer.cs">
+      <DependentUpon>WebResources.zh-CN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="App_GlobalResources\WebResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WebResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\WebResources.en-US.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WebResources.en-US.resx</DependentUpon>
-    </Compile>
-    <Compile Include="App_GlobalResources\WebResources.zh-CN.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WebResources.zh-CN.resx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\Base\BaseController.cs" />
+    <Compile Include="Connected Services\WCF.ReactionWay\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Base\UserController.cs" />
     <Compile Include="Controllers\Base\ResPonseMessage.cs" />
+    <Compile Include="Controllers\Base\WebController.cs" />
+    <Compile Include="Controllers\Filter\WebFilter.cs" />
     <Compile Include="Controllers\Filter\UserCenterFilter.cs" />
-    <Compile Include="Controllers\Main\IndexController.cs" />
+    <Compile Include="Controllers\Main\KetcherController.cs" />
+    <Compile Include="Controllers\Main\MainController.cs" />
+    <Compile Include="Controllers\Main\MoleculeTransformController.cs" />
+    <Compile Include="Controllers\Main\SyntheticController.cs" />
     <Compile Include="Controllers\User\RegisterController.cs" />
+    <Compile Include="Controllers\User\UserLoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IOC\MEFDependencySolver.cs" />
-    <Compile Include="LanguagesView\UserViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Main\App_LocalResources\Index.cshtml.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="configs\setting\setting.config" />
-    <Content Include="Views\Index\Index.cshtml" />
+    <Content Include="Setting\setting.config" />
     <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Scripts\.DS_Store" />
+    <Content Include="Content\.DS_Store" />
+    <Content Include="Content\.sass-cache\58a0e59d0b4a8573202a9668958dfaa4ce482ddc\style.scssc" />
+    <Content Include="Content\.sass-cache\7833429c19526980937de113914823f7f163fb81\_syntheticnew.scssc" />
+    <Content Include="Content\.sass-cache\7833429c19526980937de113914823f7f163fb81\_syntheticnew_icon.scssc" />
+    <Content Include="Content\.sass-cache\b0e74e2918253ee312960617c1d7ba039669234c\_index.scssc" />
+    <Content Include="Content\.sass-cache\cef5712572a10ce595a81d4d49220a64bb202c60\_checkbox.scssc" />
+    <Content Include="Content\.sass-cache\cef5712572a10ce595a81d4d49220a64bb202c60\_function.scssc" />
+    <Content Include="Content\.sass-cache\cef5712572a10ce595a81d4d49220a64bb202c60\_mixin.scssc" />
+    <Content Include="Content\.sass-cache\cef5712572a10ce595a81d4d49220a64bb202c60\_popup.scssc" />
+    <Content Include="Content\.sass-cache\cef5712572a10ce595a81d4d49220a64bb202c60\_table.scssc" />
+    <Content Include="Content\.sass-cache\cef5712572a10ce595a81d4d49220a64bb202c60\_utilities.scssc" />
+    <Content Include="Content\.sass-cache\e0605771e971020e40f8f57191662a73f2a74a1a\_index.scssc" />
+    <Content Include="Content\.sass-cache\e0605771e971020e40f8f57191662a73f2a74a1a\_index_icon.scssc" />
+    <Content Include="Content\.sass-cache\f55966ed0174d281f28d5084f53ab5fb33054c19\_common.scssc" />
+    <Content Include="Content\.sass-cache\f55966ed0174d281f28d5084f53ab5fb33054c19\_footer.scssc" />
+    <Content Include="Content\.sass-cache\f55966ed0174d281f28d5084f53ab5fb33054c19\_head.scssc" />
+    <Content Include="Content\.sass-cache\f55966ed0174d281f28d5084f53ab5fb33054c19\_reset.scssc" />
+    <Content Include="Content\common\_common.scss" />
+    <Content Include="Content\common\_footer.scss" />
+    <Content Include="Content\common\_head.scss" />
+    <Content Include="Content\common\_reset.scss" />
+    <Content Include="Content\page\.DS_Store" />
+    <Content Include="Content\page\index\_index.scss" />
+    <Content Include="Content\page\index\_index_icon.scss" />
+    <Content Include="Content\page\syntheticnew\_syntheticnew.scss" />
+    <Content Include="Content\page\syntheticnew\_syntheticnew_icon.scss" />
+    <Content Include="Content\style.css.map" />
+    <Content Include="Content\style.scss" />
+    <Content Include="Content\ui\.DS_Store" />
+    <Content Include="Content\ui\_checkbox.scss" />
+    <Content Include="Content\ui\_function.scss" />
+    <Content Include="Content\ui\_mixin.scss" />
+    <Content Include="Content\ui\_popup.scss" />
+    <Content Include="Content\ui\_table.scss" />
+    <Content Include="Content\ui\_utilities.scss" />
+    <Content Include="Views\Shared\SiteLayout.cshtml" />
+    <Content Include="Views\Shared\UserLayout.cshtml" />
+    <Content Include="Log\2017_04_28.log" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\Ketcher\Index.cshtml" />
+    <Content Include="Scripts\Ketcher\.gitmodules" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_any.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_aromatic.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_crossed.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_double.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_doublearomatic.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_down.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_single.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_singlearomatic.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_singledouble.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_triple.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_up.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\bond_updown.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\chain.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\charge_minus.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\charge_plus.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template0.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template1.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template10.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template11.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template2.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template3.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template4.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template5.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template6.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template7.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template8.mol" />
+    <Content Include="Scripts\Ketcher\icons\mol\template9.mol" />
+    <Content Include="Scripts\Ketcher\ketcher.py" />
+    <Content Include="Scripts\Ketcher\layout_patterns.sh" />
+    <Content Include="Scripts\Ketcher\LICENSE.GPL" />
+    <Content Include="Scripts\Ketcher\mol\action\layout.mol" />
+    <Content Include="Scripts\Ketcher\mol\action\sgroup.mol" />
+    <Content Include="Scripts\Ketcher\mol\charge_minus.mol" />
+    <Content Include="Scripts\Ketcher\mol\charge_plus.mol" />
+    <Content Include="Scripts\Ketcher\mol\crossed.mol" />
+    <Content Include="Scripts\Ketcher\mol\doublearomatic.mol" />
+    <Content Include="Scripts\Ketcher\mol\down.mol" />
+    <Content Include="Scripts\Ketcher\mol\pattern\hexa1.mol" />
+    <Content Include="Scripts\Ketcher\mol\pattern\hexa2.mol" />
+    <Content Include="Scripts\Ketcher\mol\pattern\hexaa.mol" />
+    <Content Include="Scripts\Ketcher\mol\pattern\naphthalene.mol" />
+    <Content Include="Scripts\Ketcher\mol\pattern\penta.mol" />
+    <Content Include="Scripts\Ketcher\mol\singlearomatic.mol" />
+    <Content Include="Scripts\Ketcher\mol\singledouble.mol" />
+    <Content Include="Scripts\Ketcher\mol\up.mol" />
+    <Content Include="Scripts\Ketcher\mol\updown.mol" />
+    <Content Include="Scripts\Ketcher\pack-zip.sh" />
+    <Content Include="Scripts\Ketcher\render_buttons.sh" />
+    <Content Include="Scripts\Ketcher\render_sdf.sh" />
+    <Content Include="Scripts\Ketcher\render_templates.sh" />
+    <Content Include="Image\syntheticnew\.DS_Store" />
+    <Content Include="DatabaseListFile\Database.config" />
+    <None Include="Connected Services\WCF.ReactionWay\SearchService.wsdl" />
+    <None Include="Connected Services\WCF.ReactionWay\SearchService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF.ReactionWay\SearchService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF.ReactionWay\SearchService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF.ReactionWay\SearchService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF.ReactionWay\SearchService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF.ReactionWay\SearchService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF.ReactionWay\SearchService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\WCF.ReactionWay\Web.WCF.ReactionWay.CASAndPrice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WCF.ReactionWay\Web.WCF.ReactionWay.CitationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WCF.ReactionWay\Web.WCF.ReactionWay.ConditionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WCF.ReactionWay\Web.WCF.ReactionWay.ItemNode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WCF.ReactionWay\Web.WCF.ReactionWay.PriceEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WCF.ReactionWay\Web.WCF.ReactionWay.RetroResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\WCF.ReactionWay\Web.WCF.ReactionWay.ReturnList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\MainLayout.cshtml" />
+    <Content Include="Views\Synthetic\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -144,31 +551,28 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\MoleculeTransform\" />
+    <Folder Include="Views\UserLogin\" />
+    <Folder Include="Views\Web\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Application\Application.IService\Application.IService.csproj">
-      <Project>{32bbf203-31e0-4975-9d3d-2fc4e0be0a3d}</Project>
-      <Name>Application.IService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Application\Application.Model\Application.Model.csproj">
-      <Project>{cb85d1b3-feb5-47b9-a2cf-55ac57f51d4b}</Project>
-      <Name>Application.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Application\Application\Application.csproj">
-      <Project>{b04eb6d1-a61e-45c9-aecf-6c62df69de71}</Project>
-      <Name>Application</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Common\Application.Common\Application.Common.csproj">
       <Project>{3f3f72cd-52f1-4018-8866-7e9d3abe905d}</Project>
       <Name>Application.Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\WebResources.zh-CN.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>WebResources.zh-CN.designer.cs</LastGenOutput>
-    </Content>
+    <ProjectReference Include="..\..\Core\Core.Data\Core.Data.csproj">
+      <Project>{13e308dd-f9b9-4374-966e-e960f60a5536}</Project>
+      <Name>Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core.IData\Core.IData.csproj">
+      <Project>{378e365b-cb24-4985-9e71-219e1e0a290e}</Project>
+      <Name>Core.IData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Core.Model\Core.Model.csproj">
+      <Project>{26b6a00f-0d44-440a-b9f6-c3a1514f6a81}</Project>
+      <Name>Core.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\WebResources.resx">
@@ -177,10 +581,23 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\WebResources.en-US.resx">
+    <Content Include="App_GlobalResources\WebResources.zh-CN.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>WebResources.en-US.designer.cs</LastGenOutput>
+      <LastGenOutput>WebResources.zh-CN.designer.cs</LastGenOutput>
     </Content>
+    <EmbeddedResource Include="Views\Main\App_LocalResources\Index.cshtml.zh-CN.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Main\App_LocalResources\Index.cshtml.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Index.cshtml.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WCF.ReactionWay\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

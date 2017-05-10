@@ -1,0 +1,113 @@
+﻿@using Web.Views.Main.App_LocalResources;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <!--[if lt IE 9]>
+        <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+        <script src="//cdn.bootcss.com/placeholders/4.0.1/placeholders.jquery.min.js"></script>
+        <script>
+          $(function(){
+            $('input[type=text][placeholder], input[type=password][placeholder], textarea[placeholder]').placeholder();
+          })
+        </script>
+    <![endif]-->
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="l"><i class="logo"></i></a>
+        <nav class="l_menu">
+            <ul>
+                <li><a href="#">@Resources.WebResources.Explain</a></li>
+                <li><a href="#">iChemical.com</a></li>
+                <li><a href="#">WHmall.com &nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+                <li>
+                    <a href="@Url.Action("ChangeCulture","Main")?ddlCulture=@ViewBag.Otherlanguage" id="aLanguage">
+                        @Resources.WebResources.LanguageSwitch
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="r_menu">
+            <ul>
+                <li><a href="#"><i class="user_icon"></i>@Resources.WebResources.Login</a></li>
+                <li><a href="#"><i class="add_user_icon"></i>@Resources.WebResources.SignUp</a></li>
+                <li><a href="#" class="J_head_menu"><i class="menu_icon"></i></a></li>
+            </ul>
+        </div>
+        <div class="HBContent isShow">
+            <ul class="slide_down">
+                <li>
+                    <a href="#"><i class="setting_icon"></i>@Resources.WebResources.Setting </a>
+                    <div class="expandible">
+                        <a href="#">语言<span>简体中文</span></a>
+                        <a href="#">国家/地区<span>中华人民共和国</span></a>
+                    </div>
+                </li>
+                <li><a href="#"><i class="time_icon"></i>查询历史记录</a></li>
+                <li><a href="#"><i class="collect_icon"></i>我的收藏项</a></li>
+                <li><a href="#" class="active"><i class="feedback_icon"></i>反馈</a></li>
+            </ul>
+        </div>
+    </header>
+    <header class="header2" style='display: none'>
+        <a href="#" class="l"><i class="logo"></i></a>
+        <div class="search_form">
+            <form action="">
+                <div class="search">
+                    <input class="searchTxt" placeholder="@Index_cshtml.InputRemind" type="text" autocomplete="off" />
+                    <button type="submit" name="commit" class="search_match"><i class="loading_icon"></i></button>
+                </div>
+                <button class="search_draw"><i class="syntheticnew_icon"></i></button>
+            </form>
+        </div>
+        <div class="r_menu">
+            <ul>                
+                <li><a href="#"><i class="gray_user_icon"></i>@Resources.WebResources.Login</a></li>
+                <li><a href="#"><i class="gray_addUser_icon"></i>@Resources.WebResources.SignUp</a></li>
+                <li><a href="#" class="J_head_menu"><i class="green_menu_icon"></i></a></li>
+            </ul>
+        </div>
+        <div class="HBContent">
+            <ul class="slide_down">
+                <li>
+                    <a href="#"><i class="setting_icon"></i>@Resources.WebResources.Setting</a>
+                    <div class="expandible">
+                        <a href="#">语言<span>简体中文</span></a>
+                        <a href="#">国家/地区<span>中华人民共和国</span></a>
+                    </div>
+                </li>
+                <li><a href="#"><i class="time_icon"></i>查询历史记录</a></li>
+                <li><a href="#"><i class="collect_icon"></i>我的收藏项</a></li>
+                <li><a href="#" class="active"><i class="feedback_icon"></i>反馈</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="index_page ">
+        @RenderBody()
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <section class="l version">
+                @Resources.WebResources.Copyright
+            </section>
+            <section class="r">
+                <ul class="footer_menu">
+                    <li><a href="#">@Resources.WebResources.TermsOfCondition</a></li>
+                    <li><a href="#">@Resources.WebResources.Contact </a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.icheck.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/page/common.js"></script>
+    <script type="text/javascript" src="~/Scripts/page/index.js"></script>
+    <script type="text/javascript" src="~/Scripts/layer/layer.js"></script>
+    @RenderSection("script", required: true)    
+</body>
+</html>

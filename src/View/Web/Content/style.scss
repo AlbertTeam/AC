@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+//添加自定义工具类
+@import "ui/utilities";
+@import "ui/mixin";
+@import "ui/function";
+@import "ui/popup";
+@import "ui/table";
+@import "ui/checkbox";
+
+// 添加reset
+@import "common/reset";
+@import "common/common";
+@import "common/head";
+@import "common/footer";
+
+//页面
+@import "page/index/index";								    				//首页
+@import "page/index/index_icon";											//首页小图标
+@import "page/syntheticnew/syntheticnew";								    //搜索页
+@import "page/syntheticnew/syntheticnew_icon";								//搜索页小图标
+@import "page/set";															//设置
+@import "page/login";														//登录
+			    	       

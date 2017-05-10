@@ -1,0 +1,7 @@
+@charset "UTF-8";
+// 将px转换为对应的rem，以6PS设计稿为样本，基准1rem = 1242/10 = 124.2 px
+@function px2rem ($px) {
+  @return $px / 124.2 * 1rem;
+}
+
+

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommonTool.Setting;
+using Core.Connection.DataBaseConfig;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Data;
@@ -11,13 +13,14 @@ namespace Core.Connection
 {
 
     [Export(typeof(ICoreConnection))]
-    public class CoreConnection: ICoreConnection
+    public class CoreConnection : ICoreConnection
     {
-        public IDbConnection ConnectionClien()
+        public IDbConnection ConnectionClien(DBString key)
         {
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(DatabaseManager.GetDatabase(key.ToString()).ConnectionString);
             conn.Open();
             return conn;
         }
+
     }
 }

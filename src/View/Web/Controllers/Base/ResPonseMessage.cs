@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace IMS.WebModel
+namespace Web.Controllers.Base
 {
     public class ResPonseMessage
     {
+        public ResPonseMessage()
+        {
+            result = new ResponseResult();
+        }
         /// <summary>
         /// 响应头
         /// </summary>
         public ResponseHeader header
         { get; set; }
-
         /// <summary>
         /// 响应结果
         /// </summary>
         public ResponseResult result
         { get; set; }
-
         /// <summary>
         /// 响应内容
         /// </summary>
         public object body
         { get; set; }
     }
-
-
-
     public class ResponseHeader
     {
         /// <summary>
@@ -37,14 +36,12 @@ namespace IMS.WebModel
         /// <para>501：验签失败</para>
         /// </summary>
         public int statusCode { get; set; }
-
         /// <summary>
         /// 响应格式
         /// 目前只支持 Json,XML
         /// </summary>
         public string resType { get; set; }
     }
-
     public class ResponseResult
     {
         /// <summary>
@@ -77,27 +74,6 @@ namespace IMS.WebModel
         public int cacheStatus
         { get; set; }
     }
-
-    public class ResponseStatus
-    {
-        public int status { get; set; }
-        public int userid { get; set; }
-        public string errormessage { get; set; }
-    }
-
-    public class ResultMessage
-    {
-        public object Result { set; get; }
-    }
-
-    public class DoResult
-    {
-        public int Code { set; get; }
-
-        public string Msg { set; get; }
-         
-    }
-
     public class ItemResult
     {
         public ItemResult()
@@ -106,17 +82,10 @@ namespace IMS.WebModel
         }
         public List<Result> results { set; get; }
     }
-
-  
     public class Result
     {
-        public int id { set; get; }
-
         public int code { set; get; }
 
         public string msg { set; get; }
     }
-
-
-
 }

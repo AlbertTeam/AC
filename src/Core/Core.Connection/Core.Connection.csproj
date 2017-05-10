@@ -30,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommonTool">
+      <HintPath>..\..\..\CommonDLL\WHT\CommonTool.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,6 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoreConnection.cs" />
+    <Compile Include="DataBaseConfig\CaseInsensitiveStringEqualityComparer.cs" />
+    <Compile Include="DataBaseConfig\ConfigurationHelper.cs" />
+    <Compile Include="DataBaseConfig\DataAccessSetting.cs" />
+    <Compile Include="DataBaseConfig\DatabaseFilePathSettingException.cs" />
+    <Compile Include="DataBaseConfig\DatabaseList.cs" />
+    <Compile Include="DataBaseConfig\DatabaseManager.cs" />
+    <Compile Include="DataBaseConfig\FileSystemChangeEventHandler.cs" />
+    <Compile Include="DBString.cs" />
     <Compile Include="ICoreConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

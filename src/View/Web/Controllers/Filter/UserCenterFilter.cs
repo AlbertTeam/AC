@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-//using TwinkleStar.Common.Base64;
 
-namespace MrHai.BMS.Filters
+namespace Web.Filters
 {
     public class UserCenterFilter : AuthorizeAttribute
     {
-        string cookieIDField = "";
+        string cookieIDField = "d*2#!";
         string cookieNameField = "";
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {

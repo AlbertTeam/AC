@@ -1,0 +1,446 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+
+<div class="syntheticnew">
+    <div class="scheme">
+        <span>合成方案</span> (我们为您找到了以下几种合成原料，您可以选择一个原料添加到合成方案，点击搜索继续下一步分析。)
+        <div class="export_route">
+            <i class="loading_icon2"></i>导出路线
+        </div>
+        <a href="#" class="collect"><i class="collect_icon2"></i>收藏此方案</a>
+    </div>
+    <div class="SyntheticSearch" id="box_test">
+        <!-- <p class='fruitless J_fruitless'>无数据</p> -->
+        <!--   <div class="OrgBox">
+             <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="">
+             <p>CAS:120-46-7</p>
+             <p>MW:224.259</p>
+             <p>产率:99.7% 1步</p>
+             <a href="#" class="historical_offer_btn">历史报价</a>
+         </div>
+         <div class="precise">
+             <i class="arrows">&lt;</i>
+             <a href="#" class="precise_btn">精确路线</a>
+             <div class="hint_message">
+                 <div class="msg">
+                     <p><i></i>共68种路线，已选择#1路线<a href="#">更换</a></p>
+                     <p><i></i>共35种反应条件，已选择#1反应条件<a href="#">查看</a><a href="#">更换</a></p>
+                 </div>
+             </div>
+         </div> -->
+        <!-- <div class="capacity">
+            <a href="#" class="capacity_btn">智能分析</a>
+            <div class="hint_message">
+                <div class="msg">
+                    <p><i></i>共68种路线，已选择#1路线<a href="#">更换</a></p>
+                    <p><i></i>共35种反应条件，已选择#1反应条件<a href="#">查看</a><a href="#">更换</a></p>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="state">
+            <i class="plus_sign">+</i>
+             <div class="hint_message">
+                <div class="msg">
+                    <p>共68种<a href="#" class="btn1">精确路线</a></p>
+                    <p>共35种<a href="#" class="btn2">智能分析</a></p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <!-- 历史报价 -->
+    <!-- <div class="dimmer" style='display: block;'> -->
+    <div class="dimmer">
+        <div class="historyPrice" style="display: block;">
+            <h4 class="priceTitle">历史报价信息</h4>
+            <ul id="ul_his_price">
+                <li class="title">
+                    <span class="titPrice">价格</span>
+                    <span class="titNum">数量</span>
+                    <span class="titPurity">纯度</span>
+                    <span class="titTime">成交时间</span>
+                </li>
+                <li><span class="titPrice">￥235.0</span><span class="titNum">15.0kg</span><span class="titPurity">99.5</span><span class="titTime">2016-03-15</span></li>
+            </ul>
+            <div class="inquiryBtns">
+                <a class="btnClose J_close_historyPrice" href="#">关闭</a>
+                <a class="inBtn" htef='#'>委托求购</a>
+            </div>
+        </div>
+    </div>
+    <!-- 查看反应条件及步骤 -->
+    <!-- <div class="dimmer" style='display: block;'> -->
+    <div class="dimmer ">
+        <div class='reaction_dimmer'>
+            <p class="title">
+                <span class="l">反应条件及步骤</span>
+                <a href="#" class='J_close_sDataLists fs18'>x</a>
+            </p>
+            <div class="sDataLists_details">
+                <div id="box_0">
+                    <div>
+                        Bioorganic and Medicinal Chemistry Letters, vol. 24, 12, (2014), p. 2699 - 2702 To a solution of dimethyl sulfoxide (11.0 mL, 155.0 mol) in tetrahydrofuran (1.0 L) was added trifluoroaceticanhydride (13.2 mL, 93.1mmol) at -78 掳C under argon. After stirring at -78 掳C for
+                    </div><a href="###">...显示全部</a>
+                </div>
+                <div class="yield">
+                    <span>产率：70%</span>1步
+                </div>
+            </div>
+            <div class="sDataLists_details_img">
+                <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic300x160/png/C1CCCCC1&gt;&gt;CCCCCC">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="syntheticnew_nav">
+    <a href="#" class="restart"><i class="restart_icon"></i>重新开始</a>
+
+    <ul>
+        <li><a href="#" class="active">合成路线</a></li>
+        <li><a href="#">智能分析</a></li>
+    </ul>
+    <div class="switch_view">
+        <a href="#" class="list1"></a>
+        <a href="#" class="list2"></a>
+        <p>共有35种智能分析</p>
+        <!--   <a href="#" class="list11"></a>
+          <a href="#" class="list21"></a> -->
+    </div>
+</div>
+<div class="sDataLists">
+    <table class="ui selectable celled table">
+        <tr class="active   J_select_tr">
+            <td>
+                <input checked="checked" class="J_select_radio" id="aaa" name="optionsRadios" type="radio" value="">
+                <div class="reactant">
+                    <img height="80px" src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" width="100px">
+                    <p class="money">71-43-2</p>
+                </div>
+            </td>
+            <td>
+                <div class="sDataLists_details">
+                    <p class="title">
+                        <span class="l">反应条件及步骤</span>
+                    </p>
+                    <div id='box_0'>
+                        Bioorganic and Medicinal Chemistry Letters, vol. 24, 12, (2014), p. 2699 - 2702 To a solution of dimethyl sulfoxide (11.0 mL, 155.0 mol) in tetrahydrofuran (1.0 L) was added trifluoroaceticanhydride (13.2 mL, 93.1mmol) at -78 掳C under argon. After stirring at -78 掳C for 15 min, a sng at -78 掳C for 15 min, a s
+                    </div>
+                    <div class="yield">
+                        <span>产率：70%</span>1步
+                    </div>
+                </div>
+                <div class="sDataLists_details_img">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic300x160/png/C1CCCCC1&gt;&gt;CCCCCC">
+                </div>
+            </td>
+        </tr>
+        <tr class="J_select_tr">
+            <td>
+                <input checked="checked" class="J_select_radio" id="aaa" name="optionsRadios" type="radio" value="">
+                <div class="reactant">
+                    <img height="80px" src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" width="100px">
+                    <p class="money">71-43-2</p>
+                </div>
+            </td>
+            <td>
+                <div class="sDataLists_details">
+                    <p class="title">
+                        <span class="l">反应条件及步骤</span>
+                    </p>
+                    <div id='box_0'>
+                        Bioorganic and Medicinal Chemistry Letters, vol. 24, 12, (2014), p. 2699 - 2702 To a solution of dimethyl sulfoxide (11.0 mL, 155.0 mol) in tetrahydrofuran (1.0 L) was added trifluoroaceticanhydride (13.2 mL, 93.1mmol) at -78 掳C under argon. After stirring at -78 掳C for 15 min, a sng at -78 掳C for 15 min, a s
+                    </div>
+                    <div class="yield">
+                        <span>产率：70%</span>1步
+                    </div>
+                </div>
+                <div class="sDataLists_details_img">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic300x160/png/C1CCCCC1&gt;&gt;CCCCCC">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <a href="#" class="load_more">- 加载更多 -</a>
+</div>
+<div class='lDataLists'>
+    <ul>
+        <li>
+            <span class="num">#1</span>
+            <div class="state">
+                <div class="dimmer"></div>
+                <div class="priceBtn">
+                    <a href="JavaScript:;" class="search J_condition_btn">查看反应条件</a>
+                    <a href="#" class="condition ">选择</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                <p><a href="#">71-43-2</a></p>
+            </div>
+        </li>
+        <li>
+            <span class="num">#2</span>
+            <div class="state">
+                <div class="dimmer"></div>
+                <div class="priceBtn">
+                    <a href="JavaScript:;" class="search J_condition_btn">查看反应条件</a>
+                    <a href="#" class="condition ">选择</a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="itemL">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                    <p><a href="#">71-43-2</a></p>
+                </div>
+                <div class="plus_sign">+</div>
+                <div class="itemR">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                    <p><a href="#">71-43-2</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <span class="num">#1</span>
+            <div class="state">
+                <div class="dimmer"></div>
+                <div class="priceBtn">
+                    <a href="JavaScript:;" class="search J_condition_btn">查看反应条件</a>
+                    <a href="#" class="condition ">选择</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                <p><a href="#">71-43-2</a></p>
+            </div>
+        </li>
+        <li>
+            <span class="num">#2</span>
+            <div class="state">
+                <div class="dimmer"></div>
+                <div class="priceBtn">
+                    <a href="JavaScript:;" class="search J_condition_btn">查看反应条件</a>
+                    <a href="#" class="condition ">选择</a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="itemL">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                    <p><a href="#">71-43-2</a></p>
+                </div>
+                <div class="plus_sign">+</div>
+                <div class="itemR">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                    <p><a href="#">71-43-2</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <span class="num">#1</span>
+            <div class="state">
+                <div class="dimmer"></div>
+                <div class="priceBtn">
+                    <a href="JavaScript:;" class="search J_condition_btn">查看反应条件</a>
+                    <a href="#" class="condition ">选择</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                <p><a href="#">71-43-2</a></p>
+            </div>
+        </li>
+        <li>
+            <span class="num">#2</span>
+            <div class="state">
+                <div class="dimmer"></div>
+                <div class="priceBtn">
+                    <a href="JavaScript:;" class="search J_condition_btn">查看反应条件</a>
+                    <a href="#" class="condition ">选择</a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="itemL">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                    <p><a href="#">71-43-2</a></p>
+                </div>
+                <div class="plus_sign">+</div>
+                <div class="itemR">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                    <p><a href="#">71-43-2</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <span class="num">#1</span>
+            <div class="state">
+                <div class="dimmer"></div>
+                <div class="priceBtn">
+                    <a href="JavaScript:;" class="search J_condition_btn">查看反应条件</a>
+                    <a href="#" class="condition ">选择</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                <p><a href="#">71-43-2</a></p>
+            </div>
+        </li>
+        <li>
+            <span class="num">#2</span>
+            <div class="state">
+                <div class="dimmer"></div>
+                <div class="priceBtn">
+                    <a href="JavaScript:;" class="search J_condition_btn">查看反应条件</a>
+                    <a href="#" class="condition ">选择</a>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="itemL">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                    <p><a href="#">71-43-2</a></p>
+                </div>
+                <div class="plus_sign">+</div>
+                <div class="itemR">
+                    <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic400x300/png/CCOC(C)=O" alt="" />
+                    <p><a href="#">71-43-2</a></p>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+
+    <a href="#" class="load_more">- 加载更多 -</a>
+</div>
+<!-- 右侧导航 -->
+<div class="syntheticnew_dimmer">
+    <div class="syntheticnew_slide J_syntheticnew_slide">
+        <div class="condition">
+            <div class="ovh"><span>反应条件</span><a href="JavaScript:;" class="J_close_syntheticnew_slide">></a></div>
+            <img class="big_img" src="http://www.whmall.com:8080/SearchService.svc/rest/pic300x160/png/C1CCCCC1&gt;&gt;CCCCCC">
+        </div>
+        <div class="sDataLists">
+            <table class="ui selectable celled table">
+                <!-- <tr class="active">
+                    <td>
+                        <div class="l mt10">
+                            <input checked="checked" class="optionsRadios" id="3731448" name="optionsRadios" type="radio" value="">
+                        </div>
+                        <div class="l w800">
+                            <div class="details">
+                                <p class="name">反应条件</p>
+                                <p>oxygen; Mo1V0.3Te0.2Nb0.1On</p>
+                                <p class="name">参考文献</p>
+                                <p>Journal of physical chemistry, vol. 93, 2, (1989), p. 826 - 835</p>
+                                <p class="name">反应步骤</p>
+                                <div id='box_0'>
+                                    Bioorganic and Medicinal Chemistry Letters, vol. 24, 12, (2014), p. 2699 - 2702 To a solution of dimethyl sulfoxide (11.0 mL, 155.0 mol) in tetrahydrofuran (1.0 L) was added trifluoroaceticanhydride (13.2 mL, 93.1mmol) at -78 掳C under argon. After stirring at -78 掳C for 15 min, a sng at -78 掳C for 15 min, a s </div>
+                                <div class="yield">
+                                    <span>产率：70%</span>1步
+                                </div>
+                            </div>
+                            <div class="details_img">
+                                <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic300x160/png/C1CCCCC1&gt;&gt;CCCCCC">
+                            </div>
+                        </div>
+                    </td>
+                </tr> -->
+                <tr class="active">
+                    <td class="J_select_tr">
+                        <!-- <label for='bbb'>  -->
+                        <div class="l mt10">
+                            <input checked="checked" class="J_select_radio" name="aaa" type="radio" value="">
+                        </div>
+                        <div class="l w800">
+                            <p class="title">
+                                <span class="l">反应条件及步骤</span>
+                                <a href="#" class="shield mr0 J_shield">屏蔽此条</a>
+                            </p>
+                            <div class="sDataLists_details">
+                                <div id="box_0">
+                                    Bioorganic and Medicinal Chemistry Letters, vol. 24, 12, (2014), p. 2699 - 2702 To a solution of dimethyl sulfoxide (11.0 mL, 155.0 mol) in tetrahydrofuran (1.0 L) was added trifluoroaceticanhydride (13.2 mL, 93.1mmol) at -78 掳C under argon. After stirring at -78 掳C for 15 min, a sng at -78 掳C for 15 min, a s
+                                </div>
+                                <div class="yield">
+                                    <span>产率：70%</span>1步
+                                </div>
+                            </div>
+                            <div class="sDataLists_details_img">
+                                <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic300x160/png/C1CCCCC1&gt;&gt;CCCCCC">
+                            </div>
+                        </div>
+                        <!-- </label>  -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="J_select_tr">
+                        <!-- <label for='aaa'>  -->
+                        <div class="l mt10">
+                            <input name="aaa" class="J_select_radio" type="radio" value="">
+                        </div>
+                        <div class="l w800">
+                            <p class="title">
+                                <span class="l">反应条件及步骤</span>
+                                <a href="#" class="shield mr0 J_shield">屏蔽此条</a>
+                            </p>
+                            <div class="sDataLists_details">
+                                <div id="box_0">
+                                    Bioorganic and Medicinal Chemistry Letters, vol. 24, 12, (2014), p. 2699 - 2702 To a solution of dimethyl sulfoxide (11.0 mL, 155.0 mol) in tetrahydrofuran (1.0 L) was added trifluoroaceticanhydride (13.2 mL, 93.1mmol) at -78 掳C under argon. After stirring at -78 掳C for 15 min, a sng at -78 掳C for 15 min, a s
+                                </div>
+                                <div class="yield">
+                                    <span>产率：70%</span>1步
+                                </div>
+                            </div>
+                            <div class="sDataLists_details_img">
+                                <img src="http://www.whmall.com:8080/SearchService.svc/rest/pic300x160/png/C1CCCCC1&gt;&gt;CCCCCC">
+                            </div>
+                        </div>
+                        <!-- </label>  -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- 屏蔽原因 -->
+<!-- <div class="dimmer" style='display: block;'> -->
+<!-- <div class="dimmer ">
+    <div class='shielding_dimmer'>
+        <p class="title">
+            <span>屏蔽原因</span>
+            <a href="#" class="shielding_btn J_shielding_dimmer">确定</a>
+        </p>
+        <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+        </ul>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section script{
+
+
+
+
+}
+

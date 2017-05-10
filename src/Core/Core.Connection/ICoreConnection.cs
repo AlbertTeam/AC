@@ -10,7 +10,7 @@ namespace Core.Connection
 {
     public interface ICoreConnection
     {
-        IDbConnection ConnectionClien(); 
+        IDbConnection ConnectionClien(DBString key); 
 
     }
 }

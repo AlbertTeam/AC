@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// 例子:将px转为rem eg: @include dimension('width', 1142);
+@mixin dimension($name, $px) {
+  #{$name}: px2rem($px);
+}
+
+// 例子: $font-size 字体大小按6P测量  eg: @include font-dpr(36);
+@mixin font-dpr($font-size){
+  font-size: $font-size / 3 * 1px;
+
+  [data-dpr="2"] & {
+    font-size: $font-size * 2 / 3 * 1px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size  * 1px;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// 利用伪元素清除浮动 @mixin clearfix;
+@mixin clearfix{
+    &:after{
+        content:"";
+        display:block;
+        clear:both;
+    }
+}

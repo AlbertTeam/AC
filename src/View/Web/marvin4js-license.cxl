@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--PLEASE DO NOT MODIFY THIS FILE AND BE AWARE THAT THE FILE CONTAINS CONFIDENTIAL INFORMATION.-->
+<ChemAxon>
+<License>
+<Field Name="Software" Value="Marvin Applets"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFA37WBnE8b47JOyMtw5DODK+pNQIAhQDdq5QE+gfbqMpih8JqG/AdtVXOA=="/>
+</License>
+<License>
+<Field Name="Software" Value="Marvin Beans"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFF3Gbnr6Ure3ROkmgtHlWVUPk5f+AhUAlPKz3KeojaVTVN/oE/FRXdrRrZ0="/>
+</License>
+<License>
+<Field Name="Software" Value="Instant JChem"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="B/S/P/E" Value="Standard"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCsCFCePDXq+Iofpy/wmZ4ey5z4dqut7AhNAB87saYF1TRooie2wHc+1fRB2"/>
+</License>
+<License>
+<Field Name="Software" Value="JChem Base"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Restriction Name="Search/Min" Value="Unlimited"/>
+<Signature Value="MCwCFH+mT2AvSZVHLOePmxN1CzMGUM++AhRIR1SuSYglSscCKBycQpsBAon+Gw=="/>
+</License>
+<License>
+<Field Name="Software" Value="JChem Cartridge"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFAt7m2uVBaJfkdLRqkmO77Qvo8IvAhQHABQ+mLlXVZwyjFK7VW7scMPsig=="/>
+</License>
+<License>
+<Field Name="Software" Value="Standardizer"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="B/S/P/E" Value="Standard"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFDbXC9dhS+k5dukZXi4mY/bCRTDFAhRaur6t4VVbLEXt/m8uq5WQUi3j1g=="/>
+</License>
+<License>
+<Field Name="Software" Value="Screen"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFQCErjPZGxFcZGaMVP3R4niylw6ljAIUOcP1HyxolYRx6GSue/lBvmHsDBg="/>
+</License>
+<License>
+<Field Name="Software" Value="Reactor"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFEEkd9/7U27vEmS15Ggm7ZGqIrfBAhQNIDLpY9s2gdLscm4DVfEZefodVg=="/>
+</License>
+<License>
+<Field Name="Software" Value="JKlustor"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="B/S/P/E" Value="Standard"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFG4uFmvntBv3jz/HhhKzDvd9fJwGAhRSXwLN1D+iZ7aM41BqqKQGrPGpfQ=="/>
+</License>
+<License>
+<Field Name="Software" Value="Metabolizer"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFQCAaqiXboEdQoYEtmw0jkkcnzLfRQIUdZQz9IClGMysjnzGcwhLeJqomHQ="/>
+</License>
+<License>
+<Field Name="Software" Value="Markush Search"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFGX2AXhexXzjTojFfbAc1qi+ExHGAhQpjrPPrtK2CVvcjZO2Hbyu0BjYfw=="/>
+</License>
+<License>
+<Field Name="Software" Value="Protonation Plugin Group"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFDEymZDvczbv2BtFu08OmpQyhzNkAhQyEEvxHrc1kdnwh8YxCRsO7HbJWg=="/>
+</License>
+<License>
+<Field Name="Software" Value="Partitioning Plugin Group"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFGJ50ZKSnATrnS83+epHqttYt/IiAhRidSHzo4RKStuxmoRJ5toi/dhj6g=="/>
+</License>
+<License>
+<Field Name="Software" Value="Charge Plugin Group"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFE7XYw5KA8h5rNqfdm+PyiU2OVXvAhQ80u/YnC/FqhKDRFzd7WLE7eGimw=="/>
+</License>
+<License>
+<Field Name="Software" Value="Isomers Plugin Group"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFFb2hROYQX+ddW01D1hxlfrqjkOoAhR/kOngKMCKf5SSefq95pNOfIX5cA=="/>
+</License>
+<License>
+<Field Name="Software" Value="Conformation Plugin Group"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFHg2eEfT4dSmyhXwTurDYac+qgByAhRBxVEcBi5c+NAeJr8MLCmqNFIIzQ=="/>
+</License>
+<License>
+<Field Name="Software" Value="Geometry Plugin Group"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFG5CQpo24xd57eHBnlV61zImP8QLAhR+Dvfke4IId+NjjKALUohVvyj0Lg=="/>
+</License>
+<License>
+<Field Name="Software" Value="Huckel Analysis Plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFE+xF/ljKJ/h9UsqNEytD+OqDmb+AhQmG2eNBlFAbFn4k/V3JuecTExZgw=="/>
+</License>
+<License>
+<Field Name="Software" Value="Refractivity Plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFGZfXAZtwsdkHNqqio0U/RKumQbMAhQSPYeddChFI5ByEYywQbQiECQJgw=="/>
+</License>
+<License>
+<Field Name="Software" Value="HBDA Plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFQCTbdAjJ9wok4CvTmnlMlr63+SxNAIUAMkhERQgaSlyxROfrYqA3NKJn2Q="/>
+</License>
+<License>
+<Field Name="Software" Value="Markush Enumeration Plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFEDNL89FQyTgCdeHjkE5eHEVMOBMAhUAjYSAh2bNJU7UOsU3vRmb4B/r/EU="/>
+</License>
+<License>
+<Field Name="Software" Value="Structure to Name Plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFGs0xDOGjWMUEWUMkAtpGtyAEJMfAhReWcSgjGiYGQEs19dG0RaQjc/qNQ=="/>
+</License>
+<License>
+<Field Name="Software" Value="Name to Structure"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFEf6iWypuixAG8Aeln+RmlbfNafDAhUAjn57/jWx7Jxrk0bkaPWJJ+VE2u0="/>
+</License>
+<License>
+<Field Name="Software" Value="JChem for Excel"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFEghvC7ZBEl9zCxsQFs649Bz+jIgAhQqT/8NZ5BtkzOLnsVSWLbOvGmRbg=="/>
+</License>
+<License>
+<Field Name="Software" Value="Structure Search"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFDf2Tw23WFI4MWMgcnSzaGPK3xs6AhQ7EW1Jk/JcAQe9HYmrZ15WFRxEpA=="/>
+</License>
+<License>
+<Field Name="Software" Value="IUPAC naming plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFHLJQ67Eblfbmrc7pKf7JdGqIQibAhQaCQXJBmsvyJtlRwB7LHsiNdqB0Q=="/>
+</License>
+<License>
+<Field Name="Software" Value="Calculations Pack"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFFI5WEHGrXEpSCCc98qTSum9bPUHAhQkSYG034iGxquOMj2rkSnjtW4pcw=="/>
+</License>
+<License>
+<Field Name="Software" Value="Web Services Server"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFGYY1PTUCkVCqYgeCC0XAxHGb68oAhUAiQ7fAJj1QsA+iBN4uBf9k/4Pv8s="/>
+</License>
+<License>
+<Field Name="Software" Value="Structural Frameworks Plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFQCKmZydKETFUd39XHbM5IUEB0nxCwIUUbgM3QP/xpe632D1y5ondd/bI6o="/>
+</License>
+<License>
+<Field Name="Software" Value="Structure Checker"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFCVeaFyNBZkPDVRMToUbfWVuND6mAhUAhrEUOKWNgBFoj4IHoJ+FkjTkCtY="/>
+</License>
+<License>
+<Field Name="Software" Value="Predictor Plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFHRbi24DQLiSqe2T8reLeUEVPaBWAhQb7RzOcappgAS0Y/cdN8OTiyoH9Q=="/>
+</License>
+<License>
+<Field Name="Software" Value="MCES"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFDGxHBqiBXB1kkPNNS/5RfRvUGpCAhUAirkDdX9kgu9jy1OOiHTFdGuAXxI="/>
+</License>
+<License>
+<Field Name="Software" Value="3D Alignment"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFCRVQVZFdQJ2ec81rXOVsPqqjCGPAhQJKl3C2ajaO3V9sHbDqNQVVbM9tg=="/>
+</License>
+<License>
+<Field Name="Software" Value="3D Screen"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFHoG13cPhY08G0bGYKOa2gRG6sLCAhQ0CFLPO0kVcgoITtxJrBqCbdXJrA=="/>
+</License>
+<License>
+<Field Name="Software" Value="Molecular Descriptors"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFEqMFInf6+MSUXOOQqll0t82Y87nAhUAj8Jah9RsRQsz+i0ew06dtMeup5g="/>
+</License>
+<License>
+<Field Name="Software" Value="Instant JChem VIZ"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFC5qWRPMiPbn793hkSxniUY9brtzAhQ8V+blipyaB6jTa6LcXst8PivziA=="/>
+</License>
+<License>
+<Field Name="Software" Value="ECFP/FCFP"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFFEkmn0e6410yeFyxMXdCbFnyb+TAhQ8+NOJBbaFkk5LanwIK00n2nJvxg=="/>
+</License>
+<License>
+<Field Name="Software" Value="Document to Structure"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFBulGeoiRn0Be6+gCVQkKGoqQCkzAhR8VDFSbBz92avgir6KCrX42rL9lA=="/>
+</License>
+<License>
+<Field Name="Software" Value="NMR Predictor"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFCHCgtmZnzfLp6wcyNt5VtAHIPkRAhQFGyHpfq6YLd1PE9nJWiQKhWZbQg=="/>
+</License>
+<License>
+<Field Name="Software" Value="JChem for Office"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MC0CFQCAvGdEorCb3cZptNcfaAzEXKl55AIUfK2fEDU2pHMjG5hBkBbVa7OkQgI="/>
+</License>
+<License>
+<Field Name="Software" Value="Solubility Plugin"/>
+<Field Name="License Term" Value="Academic Research"/>
+<Field Name="Licensee" Value="University of Strasbourg"/>
+<Field Name="Number of Users" Value="1"/>
+<Field Name="Expiration Date" Value="2017-01-19"/>
+<Field Name="Support Expiration Date" Value="2017-01-19"/>
+<Field Name="Comment" Value="academic research license"/>
+<Restriction Name="Server Use" Value="Not Allowed"/>
+<Signature Value="MCwCFAVz8BBYxGLHId+CZyl5K5XG8kFdAhQqq4zgZMDHqF4UftJnrujuS8Nwag=="/>
+</License>
+</ChemAxon>

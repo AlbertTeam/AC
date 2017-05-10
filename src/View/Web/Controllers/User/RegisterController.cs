@@ -1,20 +1,15 @@
-﻿using Application.IService;
-using Application.Model;
-using System;
-using System.Collections.Generic;
+﻿using Core.IService.User;
 using System.ComponentModel.Composition;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Web.Controllers.Base;
 
 namespace Web.Controllers.User
 {
     [Export]
-    public class RegisterController :BaseController
+    public class RegisterController :UserController
     {
         [Import]
-        protected IApplicationService ApplicationService { set; get; }
+        protected IUserDataAccess ApplicationService { set; get; }
         // GET: Register
         public ActionResult Index()
         {
@@ -24,9 +19,7 @@ namespace Web.Controllers.User
 
         public ActionResult Add()
         {
-            ApplicationUsers data = new ApplicationUsers();
-            data.Phone = "34242";
-            ApplicationService.InSert(data);
+            ApplicationService.DeleteCollect(111);
             return Json("");
         }
     }

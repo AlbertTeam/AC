@@ -1,0 +1,29 @@
+@charset "UTF-8";
+// 黑色遮盖层
+.dimmer {
+    display: none;
+    position: fixed;
+    top: 0!important;
+    left: 0!important;
+    width: 100%;
+    height: 100%;
+    // text-align: center;
+    vertical-align: middle;
+    background: #000;
+    opacity: .30;
+    background: rgba(0, 0, 0, 0.30);
+    opacity: 1;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-transition: background-color .5s linear;
+    transition: background-color .5s linear;
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    // user-select: none;
+    // will-change: opacity;
+    z-index: 1003;
+    // filter: progid: DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#CC000000', endColorstr='#CC000000');
+}

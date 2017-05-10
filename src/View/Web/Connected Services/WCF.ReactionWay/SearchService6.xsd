@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JChemBaseSearch" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JChemBaseSearch" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://127.0.0.1:16880/SearchService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="RetroResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Results" nillable="true" type="tns:ArrayOfMoleculeResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetroResult" nillable="true" type="tns:RetroResult" />
+  <xs:complexType name="ArrayOfMoleculeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MoleculeResult" nillable="true" type="tns:MoleculeResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMoleculeResult" nillable="true" type="tns:ArrayOfMoleculeResult" />
+  <xs:complexType name="MoleculeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BestCondition" nillable="true" type="tns:Condition" />
+      <xs:element minOccurs="0" name="Rank" type="xs:int" />
+      <xs:element minOccurs="0" name="ReactionCount" type="xs:int" />
+      <xs:element minOccurs="0" name="RetroReactionId" type="xs:int" />
+      <xs:element minOccurs="0" name="RetroSmiles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagId" type="xs:int" />
+      <xs:element minOccurs="0" name="TagPictureId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MoleculeResult" nillable="true" type="tns:MoleculeResult" />
+  <xs:complexType name="Condition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BestCitationCondition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BestCitationId" type="xs:int" />
+      <xs:element minOccurs="0" name="BestCitationReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BestCitationYield" type="xs:int" />
+      <xs:element minOccurs="0" name="CitationCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ConditionId" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FragmentSelectivity" nillable="true" type="q1:ArrayOfKeyValueOfstringint" />
+      <xs:element minOccurs="0" name="MinSelectivity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Condition" nillable="true" type="tns:Condition" />
+  <xs:complexType name="CitationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Citations" nillable="true" type="tns:ArrayOfCitation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CitationResult" nillable="true" type="tns:CitationResult" />
+  <xs:complexType name="ArrayOfCitation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Citation" nillable="true" type="tns:Citation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCitation" nillable="true" type="tns:ArrayOfCitation" />
+  <xs:complexType name="Citation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CitationId" type="xs:int" />
+      <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Yield" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Citation" nillable="true" type="tns:Citation" />
+  <xs:complexType name="ConditionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Conditions" nillable="true" type="tns:ArrayOfCondition" />
+      <xs:element minOccurs="0" name="RetroReactionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConditionResult" nillable="true" type="tns:ConditionResult" />
+  <xs:complexType name="ArrayOfCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Condition" nillable="true" type="tns:Condition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCondition" nillable="true" type="tns:ArrayOfCondition" />
+</xs:schema>

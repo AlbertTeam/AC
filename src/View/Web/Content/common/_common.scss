@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/*公共样式*/
+
+//input 
+// input[type="text"]{
+//     @include border-radius(4px);
+// }
+// input[type="text"]:focus {
+//     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(182, 224, 215, 0.6);
+//     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(182, 224, 215, 0.6);
+//     border: 1px solid #b6e0d7 !important;
+// }
+
+// textarea:focus {
+//     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(182, 224, 215, 0.6);
+//     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(182, 224, 215, 0.6);
+//     border: 1px solid #b6e0d7 !important;
+// }
+
+
+// @media only screen and (min-width: 991px) {
+//     .header .container {
+//         width:933px;
+//         margin-left: auto !important;
+//         margin-right: auto !important
+//     }
+//     .footer .container {
+//         width:933px;
+//         margin-left: auto !important;
+//         margin-right: auto !important
+//     }
+// }
+
+// @media only screen and (min-width: 992px) and (max-width: 1199px) {
+//     .header .container,
+//     .header2 .container {
+//         width:933px;
+//         margin-left: auto !important;
+//         margin-right: auto !important
+//     }    
+//     .footer .container {
+//         width:933px;
+//         margin-left: auto !important;
+//         margin-right: auto !important
+//     }
+// }
+
+// @media only screen and (min-width: 1200px) {
+//     .header .container,
+//     .header2 .container {
+//         width:1127px;
+//         margin-left: auto !important;
+//         margin-right: auto !important
+//     }
+//     .footer .container {
+//         width:1127px;
+//         margin-left: auto !important;
+//         margin-right: auto !important
+//     }
+// }
+
+// @media only screen and (min-width: 1900px) {
+//     .header .container,
+//     .header2 .container {
+//         width:1830px;
+//         margin-left: auto !important;
+//         margin-right: auto !important
+//     }
+//     .footer .container {
+//         width:1830px;
+//         margin-left: auto !important;
+//         margin-right: auto !important
+//     }
+// }
+

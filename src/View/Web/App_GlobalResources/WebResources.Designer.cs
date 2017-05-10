@@ -61,7 +61,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 地址 的本地化字符串。
+        ///  查找类似 Address 的本地化字符串。
         /// </summary>
         internal static string Address {
             get {
@@ -70,7 +70,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 地址必填 的本地化字符串。
+        ///  查找类似 AddressRequired 的本地化字符串。
         /// </summary>
         internal static string AddressRequired {
             get {
@@ -79,7 +79,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 中文 的本地化字符串。
+        ///  查找类似 Chinese 的本地化字符串。
         /// </summary>
         internal static string Chinese {
             get {
@@ -88,7 +88,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 确认密码 的本地化字符串。
+        ///  查找类似 ConfirmPassword 的本地化字符串。
         /// </summary>
         internal static string ConfirmPassword {
             get {
@@ -97,7 +97,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 密码不匹配 的本地化字符串。
+        ///  查找类似 ConfirmPasswordCompare 的本地化字符串。
         /// </summary>
         internal static string ConfirmPasswordCompare {
             get {
@@ -106,7 +106,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 确定密码必填 的本地化字符串。
+        ///  查找类似 ConfirmPasswordRequired 的本地化字符串。
         /// </summary>
         internal static string ConfirmPasswordRequired {
             get {
@@ -115,7 +115,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 英文 的本地化字符串。
+        ///  查找类似 Contact us 的本地化字符串。
+        /// </summary>
+        internal static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 ©2017 Chemical.ai icons:social network 的本地化字符串。
+        /// </summary>
+        internal static string Copyright {
+            get {
+                return ResourceManager.GetString("Copyright", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 English 的本地化字符串。
         /// </summary>
         internal static string English {
             get {
@@ -124,7 +142,16 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 全名 的本地化字符串。
+        ///  查找类似 How it works 的本地化字符串。
+        /// </summary>
+        internal static string Explain {
+            get {
+                return ResourceManager.GetString("Explain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 FullName 的本地化字符串。
         /// </summary>
         internal static string FullName {
             get {
@@ -133,7 +160,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 全名必填 的本地化字符串。
+        ///  查找类似 切换到中文版Chemical.ai 的本地化字符串。
+        /// </summary>
+        internal static string LanguageSwitch {
+            get {
+                return ResourceManager.GetString("LanguageSwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 Login 的本地化字符串。
+        /// </summary>
+        internal static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 NameRequired 的本地化字符串。
         /// </summary>
         internal static string NameRequired {
             get {
@@ -142,7 +187,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 密码 的本地化字符串。
+        ///  查找类似 Password 的本地化字符串。
         /// </summary>
         internal static string Password {
             get {
@@ -151,7 +196,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 密码必填 的本地化字符串。
+        ///  查找类似 PasswordRequired 的本地化字符串。
         /// </summary>
         internal static string PasswordRequired {
             get {
@@ -160,7 +205,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 确定 的本地化字符串。
+        ///  查找类似 Error 的本地化字符串。
+        /// </summary>
+        internal static string ResultMsgError {
+            get {
+                return ResourceManager.GetString("ResultMsgError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 Success 的本地化字符串。
+        /// </summary>
+        internal static string ResultMsgSuccess {
+            get {
+                return ResourceManager.GetString("ResultMsgSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 Save 的本地化字符串。
         /// </summary>
         internal static string Save {
             get {
@@ -178,7 +241,34 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 网化智能 的本地化字符串。
+        ///  查找类似 Setting 的本地化字符串。
+        /// </summary>
+        internal static string Setting {
+            get {
+                return ResourceManager.GetString("Setting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 SignUp 的本地化字符串。
+        /// </summary>
+        internal static string SignUp {
+            get {
+                return ResourceManager.GetString("SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 Terms of condition 的本地化字符串。
+        /// </summary>
+        internal static string TermsOfCondition {
+            get {
+                return ResourceManager.GetString("TermsOfCondition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///  查找类似 ChemicalAI 的本地化字符串。
         /// </summary>
         internal static string Title {
             get {
@@ -187,7 +277,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 名称 的本地化字符串。
+        ///  查找类似 UserName 的本地化字符串。
         /// </summary>
         internal static string UserName {
             get {
@@ -196,7 +286,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///  查找类似 用户名称必填 的本地化字符串。
+        ///  查找类似 UserNameRequired 的本地化字符串。
         /// </summary>
         internal static string UserNameRequired {
             get {
